@@ -10,4 +10,6 @@ ultimo servito: ultimo cliente che è stato servito
 i metodi synchronized si fanno quando ci troviamo difronte alla situazione critica (situazione critica: è quel pezzo di codice che permette ai thread di accedere alle risorse condivise)
 i metodi synchronized fa si che se c'è un thread che usa una risorsa condivisa impedisce a un altro metodo di entrare e consentono l'utilizzo dei metodi wait() e notify()
 
-rimuovi cliente lo fa lo sportello:
+rimuovi cliente lo fa lo sportello: 
+
+wait per essere risvegliato ha bisogno del notify di un altro metodo
