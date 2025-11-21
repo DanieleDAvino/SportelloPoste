@@ -2,7 +2,7 @@
  * Classe che implementa il thread per il totem touch screen che aggiunge
  * i clienti alla lista di attesa e genera il numero di attesa.
  * rappresenta il produttore
- * @author frida
+ * @author D'Avino Daniele
  * @version 1.0
  */
 public class GestoreArrivi implements Runnable {
