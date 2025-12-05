@@ -10,7 +10,7 @@ public class ListaClienti {
     /*variabili d'istanza*/
     private ArrayList<Integer> listaNumeri;
     private int ultimoArrivo;
-    private int ultimoServito;
+    //private int ultimoServito;
     private final int numeroMassimo = 6;
     /**
      * constructor
@@ -19,7 +19,7 @@ public class ListaClienti {
     public ListaClienti() {
         listaNumeri = new ArrayList<Integer>();
         ultimoArrivo = 0;
-        ultimoServito = 0;
+        //ultimoServito = 0;
     }
 
     /*synchronized parola chiave che gestisce il meccanismo del lock, ovvero
@@ -35,15 +35,18 @@ public class ListaClienti {
      * else resta di attesa che arrivi...(notify)
      * @return Integer ultimoServito synchronized
      */
-    public synchronized Integer rimuoviCliente() throws
-            InterruptedException {
-        while (ultimoServito >= ultimoArrivo) { //5  5
+    public synchronized Integer rimuoviCliente() throws InterruptedException{
+           /* InterruptedException {
+        while (ultimoServito >= ultimoArrivo) {
             System.out.println("non ci sono arrivi dopo l'ultimo servito");
             wait();
         }
         ultimoServito++;
-        return ultimoServito;
+        return ultimoServito;*/
+    while (listaNumeri.isEmpty()){
+        wait();
     }
+
 
     /**
      * metodo eseguito da un thread della Classe GestoreArrivi
