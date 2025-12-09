@@ -13,8 +13,8 @@ public class Sportello implements Runnable {
      */
     private ListaClienti listaClienti;
 
-    private final int minTempoServizio = 500;
-    private final int maxTempoServizio = 1000;
+    private final int minTempoServizio = 5000;
+    private final int maxTempoServizio = 8000;
     private String nome;
     /**
      * constructor
